@@ -237,7 +237,11 @@ function App() {
       </div>
 
       <div className="flex justify-between mt-[35px]">
-        <div></div>
+        <div className="cursor-pointer" onClick={() => setStage("Account")}>
+          <span className="pl-[30px] pr-[30px] pt-[10px] pb-[10px] bg-white border-[#6C757D] border-2 text-[#6C757D] rounded-lg text-white">
+            <FontAwesomeIcon icon={"arrow-left"} /> Next Step
+          </span>
+        </div>
         <div className="cursor-pointer" onClick={() => setStage("Preferences")}>
           <span className="pl-[30px] pr-[30px] pt-[10px] pb-[10px] bg-[#6C757D] rounded-lg text-white">
             Next Step <FontAwesomeIcon icon={"arrow-right"} />
@@ -354,10 +358,14 @@ function App() {
       </div>
 
       <div className="flex justify-between mt-[35px]">
-        <div></div>
+        <div className="cursor-pointer" onClick={() => setStage("Address")}>
+          <span className="pl-[30px] pr-[30px] pt-[10px] pb-[10px] bg-white border-[#6C757D] border-2 text-[#6C757D] rounded-lg text-white">
+            <FontAwesomeIcon icon={"arrow-left"} /> Next Step
+          </span>
+        </div>
         <div className="cursor-pointer" onClick={() => setStage("Preferences")}>
           <span className="pl-[30px] pr-[30px] pt-[10px] pb-[10px] bg-[#6C757D] rounded-lg text-white">
-            Next Step <FontAwesomeIcon icon={"arrow-right"} />
+            Register
           </span>
         </div>
       </div>
