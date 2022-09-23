@@ -259,8 +259,8 @@ function App() {
       </div>
 
       <div className="flex mt-[15px] gap-[5px]">
-        <div className="bg-[#6C757D] w-[25px] h-[25px] cursor-pointer" /> Send
-        notifications
+        <div className="bg-[#6C757D] w-[25px] h-[25px] cursor-pointer" /> Share
+        information with related marketer
       </div>
 
       <div className="flex flex-col mt-[25px]">
