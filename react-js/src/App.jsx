@@ -238,8 +238,8 @@ function App() {
 
       <div className="flex justify-between mt-[35px]">
         <div className="cursor-pointer" onClick={() => setStage("Account")}>
-          <span className="pl-[30px] pr-[30px] pt-[10px] pb-[10px] bg-white border-[#6C757D] border-2 text-[#6C757D] rounded-lg text-white">
-            <FontAwesomeIcon icon={"arrow-left"} /> Next Step
+          <span className="pl-[30px] pr-[30px] pt-[10px] pb-[10px] bg-white border-[#6C757D] border-2 text-[#6C757D] rounded-lg">
+            <FontAwesomeIcon icon={"arrow-left"} /> Back
           </span>
         </div>
         <div className="cursor-pointer" onClick={() => setStage("Preferences")}>
@@ -253,114 +253,36 @@ function App() {
 
   const prePage = (
     <div>
-      <div className="flex justify-between h-[60px]">
-        <div className="flex flex-col">
-          <label className="text-[10px]">Address *</label>
-
-          <div className="flex bg-[#E0E0E0] h-[50px] basis-1/2 items-center p-[10px] w-1/1">
-            <div className="h-[25px] w-[25px] bg-[#6C757D]" />
-            <input
-              type="text"
-              size="10"
-              className="translate-x-[7px] bg-[#E0E0E0] outline-none"
-            />
-          </div>
-        </div>
-
-        <div className="flex flex-col">
-          <label className="text-[10px]">Apartment, Suite, etc.</label>
-
-          <div className="flex bg-[#E0E0E0] h-[50px] basis-1/2 items-center p-[10px] w-1/1">
-            <div className="h-[25px] w-[25px] bg-[#6C757D]" />
-            <input
-              type="text"
-              size="10"
-              className="translate-x-[7px] bg-[#E0E0E0] outline-none"
-            />
-          </div>
-        </div>
+      <div className="flex gap-[5px]">
+        <div className="bg-[#6C757D] w-[25px] h-[25px] cursor-pointer" /> Send
+        notifications
       </div>
 
-      <div className="flex justify-between">
-        <div className="flex flex-col mt-[25px]">
-          <label className="text-[10px]">Country *</label>
-
-          <div className="flex bg-[#E0E0E0] h-[50px] basis-1/3 items-center p-[10px]">
-            <div className="h-[25px] w-[25px] bg-[#6C757D]" />
-            <select
-              id="country"
-              className="translate-x-[7px] bg-[#E0E0E0] outline-none"
-              value={info.country}
-            >
-              <option value="america">America</option>
-              <option value="canada">Canada</option>
-              <option value="mexico">Mexico</option>
-              <option value="germany">Germany</option>
-            </select>
-          </div>
-        </div>
-
-        <div className="flex flex-col mt-[25px]">
-          <label className="text-[10px]">City *</label>
-
-          <div className="flex bg-[#E0E0E0] h-[50px] basis-1/3 items-center p-[10px]">
-            <div className="h-[25px] w-[25px] bg-[#6C757D]" />
-            <input
-              type="text"
-              size="3"
-              className="translate-x-[7px] bg-[#E0E0E0] outline-none"
-            />
-          </div>
-        </div>
-
-        <div className="flex flex-col mt-[25px]">
-          <label className="text-[10px]">Zipcode*</label>
-
-          <div className="flex bg-[#E0E0E0] h-[50px] basis-1/3 items-center p-[10px]">
-            <div className="h-[25px] w-[25px] bg-[#6C757D]" />
-            <input
-              type="text"
-              size="3"
-              className="translate-x-[7px] bg-[#E0E0E0] outline-none"
-            />
-          </div>
-        </div>
+      <div className="flex mt-[15px] gap-[5px]">
+        <div className="bg-[#6C757D] w-[25px] h-[25px] cursor-pointer" /> Send
+        notifications
       </div>
 
-      <div>
-        <div className="flex flex-col mt-[25px]">
-          <label className="text-[10px]">Company</label>
+      <div className="flex flex-col mt-[25px]">
+        <label className="text-[10px]">Notification Preferences</label>
 
-          <div className="flex bg-[#E0E0E0] h-[50px] basis-1/2 items-center p-[10px] w-1/1">
-            <div className="h-[25px] w-[25px] bg-[#6C757D]" />
-            <input
-              type="text"
-              size="30"
-              className="translate-x-[7px] bg-[#E0E0E0] outline-none"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <div className="flex flex-col mt-[25px]">
-          <label className="text-[10px]">Phone Number</label>
-
-          <div className="flex bg-[#E0E0E0] h-[50px] basis-1/2 items-center p-[10px] w-1/1">
-            <div className="h-[25px] w-[25px] bg-[#6C757D]" />
-            <input
-              type="text"
-              size="30"
-              className="translate-x-[7px] bg-[#E0E0E0] outline-none"
-            />
-          </div>
+        <div className="flex bg-[#E0E0E0] h-[50px] basis-1/3 items-center p-[10px]">
+          <div className="h-[25px] w-[25px] bg-[#6C757D]" />
+          <select
+            id="notification"
+            className="translate-x-[7px] bg-[#E0E0E0] outline-none"
+            value={info.notifPref}
+          >
+            <option value="america">Email</option>
+            <option value="canada">Text</option>
+          </select>
         </div>
       </div>
 
       <div className="flex justify-between mt-[35px]">
         <div className="cursor-pointer" onClick={() => setStage("Address")}>
-          <span className="pl-[30px] pr-[30px] pt-[10px] pb-[10px] bg-white border-[#6C757D] border-2 text-[#6C757D] rounded-lg text-white">
-            <FontAwesomeIcon icon={"arrow-left"} /> Next Step
+          <span className="pl-[30px] pr-[30px] pt-[10px] pb-[10px] bg-white border-[#6C757D] border-2 text-[#6C757D] rounded-lg">
+            <FontAwesomeIcon icon={"arrow-left"} /> Back
           </span>
         </div>
         <div className="cursor-pointer" onClick={() => setStage("Preferences")}>
@@ -420,11 +342,9 @@ function App() {
   return (
     <main className="flex flex-col items-center justify-center bg-[#E5E5E5] h-screen">
       <div className="form bg-[#F2F2F2] w-[450px] h-[602px]">
-        <h1 className="pt-[15px] text-[32px] absolute translate-x-[159.5px] font-[600]">
-          {stage}
-        </h1>
+        <h1 className="pt-[15px] text-[32px] text-center">{stage}</h1>
 
-        <div className="bg-white mt-[79px] ml-[10px] mr-[10px] mb-[10px] h-[513px] w-[430px] flex flex-col rounded-lg">
+        <div className="bg-white mt-[25px] ml-[10px] mr-[10px] mb-[10px] h-[513px] w-[430px] flex flex-col rounded-lg">
           <div className="mt-[10px] ml-[10px] mr-[10px] bg-[#F8F9FA] w-[410px] h-[76px] flex items-center gap-[22px] pl-[14px] pr-[14px]">
             {progressOne}
             <hr className="bg-[#343A40] w-[111px] h-0.5" />
